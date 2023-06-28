@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Novo Servidor</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="custom.css">
+
+  <style>
+    .Cabecalho {
+    color: white;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+    margin-right: 10rem;
+    width: 50%;
+}
+
+.form-label{
+  color: aliceblue;
+}
+  </style>
+</head>
+<body>
+    <header><div><h1 class="Cabecalho">CADASTRO DE NOVO SERVIDOR</h1></div></header>
+    <div class="container-fluid">
+        <form id="form-cadastro">
+          <div class="mb-2">
+            <label for="nome" class="form-label">Nome Completo</label>
+            <input type="text" class="form-control" placeholder="Informe o nome completo do servidor" maxlength="45" required>
+          </div>
+          <div class="mb-2">
+            <label for="cpf" class="form-label">CPF</label>
+            <input type="text" class="form-control" id="cpf" placeholder="Digite o CPF do servidor, somente números. EX: 00011122233" maxlength="14" required>
+          </div>
+          <div class="mb-2">
+            <label for="funcao" class="form-label">Função
+            </label>
+            <input type="text" class="form-control" id="função" placeholder="Digite a função do servidor" maxlength="45" required>
+          </div>
+          <div class="mb-2">
+            <label for="select-example" class="form-label">Lotação</label>
+            <select class="form-select" id="select-example" aria-label="Exemplo de seleção" required>
+              <option selected>Selecione uma lotação...</option>
+              <option value="opcao1">Opção 1</option>
+              <option value="opcao2">Opção 2</option>
+              <option value="opcao3">Opção 3</option>
+            </select>
+          </div>
+          <div class="mb-2">
+            <label for="fone_pessoal" class="form-label">Telefone pessoal</label>
+            <input type="tel" class="form-control" id="fone_pessoal" placeholder="EX: (XX) XXXXX-XXXX, insira apenas numeros, o sistema formatará automaticamente." maxlength="15" required oninput="this.value = formatarTelefone(this.value)">
+          </div>
+          <div class="mb-2">
+            <button type="submit" class="btn btn-primary" id="btn-salvar-servidor"> SALVAR </button>
+          </div>
+        </form>
+      </div>
+
+    <script>
+        // Função para formatar CPF
+        function formatarCPF(cpf) {
+          cpf = cpf.replace(/\D/g, ''); // Remove caracteres não numéricos
+          cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); // Adiciona ponto após os primeiros 3 números
+          cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); // Adiciona ponto após os segundos 3 números
+          cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // Adiciona hífen após os últimos 2 números
+          return cpf;
+        }
+      
+        // Seleciona o campo de CPF
+        var campoCPF = document.getElementById('cpf');
+      
+        // Adiciona o evento de input para formatar o CPF conforme o usuário digita
+        campoCPF.addEventListener('input', function() {
+          this.value = formatarCPF(this.value);
+        });
+
+        function formatarTelefone(telefone) {
+  telefone = telefone.replace(/\D/g, ''); // Remove caracteres não numéricos
+  telefone = telefone.replace(/(\d{2})(\d)/, '($1) $2'); // Adiciona parênteses e espaço após os primeiros 2 números
+  telefone = telefone.replace(/(\d{4,5})(\d)/, '$1-$2'); // Adiciona hífen após os próximos 4 ou 5 números
+  telefone = telefone.replace(/(\d{4})(\d{1,4})$/, '$1$2'); // Remove o hífen se o usuário apagou um caractere
+
+  return telefone;
+}
+
+      </script>
+      
+       
+</body>
+</html>
