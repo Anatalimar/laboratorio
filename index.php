@@ -8,7 +8,7 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-	<link rel="stylesheet" href="../gec/paginas/custom.css">
+	<link rel="stylesheet" href="paginas/custom.css">
 </head>
 <body style="background-color:cornflowerblue; background-image:none;">
 	<div class="conteiner-fluid" id="cabecalho">
@@ -22,11 +22,11 @@
 				<img src="imagens/usuario.png" class="rounded mx-auto d-block"  height="128" width="128"/>
 			</div>
 				<form method="post" action="validacao/autenticacao.php">
-					<div class="mb-4">
+					<div class="mb-1">
 						<label for="usuario" class="form-label">Usuário</label>
-						<input type="text" class="form-control" id="usuario" name="usuario" placeholder="Informe nome de usuário" required>
+						<input type="text" class="form-control" id="usuario" name="usuario" placeholder="Informe usuário" required>
 					</div>
-					<div class="mb-4">
+					<div class="mb-1">
 						<label for="senha" class="form-label">Senha</label>
 						<input type="password" id="senha" class="form-control" name="senha" placeholder="Digite sua senha" required>
 					</div>

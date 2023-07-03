@@ -14,72 +14,56 @@
     .Cabecalho {
     color: white;
     margin-left: 23px;
-    }
+}
 
-    .mb-1 {
-      margin-bottom: 2rem;
-      margin-right: 10rem;
-      width: 30%;
-    }
+.mb-1 {
+    margin-bottom: 2rem;
+    margin-right: 10rem;
+    width: 30%;
+}
 
-    .mb-2 {
-      margin-bottom: 2rem;
-      margin-right: 10rem;
-      width: 50%;
-    }
+.mb-2 {
+    margin-bottom: 2rem;
+    margin-right: 10rem;
+    width: 50%;
+}
 
-    .form-label{
-      color: aliceblue;
-    }
+.form-label{
+  color: aliceblue;
+}
   </style>
-
-
 </head>
 <body>
     <header><div><h2 class="Cabecalho">CADASTRO DE NOVO SERVIDOR</h2></div></header>
     <div class="container-fluid">
         <form id="form-cadastro">
-          <div class="mb-3"></div>
-          <div class="row justify-content align-items-center g-2">
-            <div class="col-2">
-              <label for="matricula" class="form-label">Matricula</label>
-              <input type="text" class="form-control" id="matricula" placeholder="000000-A0" maxlength="10" required>  
-            </div>
-            <div class="col-3">
-              <label for="cpf" class="form-label">CPF</label>
-              <input type="text" class="form-control" id="cpf" placeholder="EX: 00011122233" maxlength="14" required>
-            </div>
-            <div class="col">
-              <label for="nome" class="form-label">Nome Completo</label>
-              <input type="text" class="form-control" id="nome" placeholder="Nome completo do servidor" maxlength="45" required>
-            </div>
+          <div class="mb-2">
+            <label for="nome" class="form-label">Nome Completo</label>
+            <input type="text" class="form-control" placeholder="Nome completo do servidor" maxlength="45" required>
+            <label for="nome" class="form-label">Nome Completo</label>
+            <input type="text" class="form-control" placeholder="Nome completo do servidor" maxlength="45" required>
           </div>
-          <div class="mb-3"></div>
-          <div class="row justify-content align-items-center g-2">
-            <div class="col-3">
-              <label for="funcao" class="form-label">Função</label>
-              <select class="form-select" id="funcao" aria-label="funcao" required>
-                <option selected>Selecione Função...</option>
-                <option value="opcao1">Opção 1</option>
-                <option value="opcao2">Opção 2</option>
-                <option value="opcao3">Opção 3</option>
-              </select>
-            </div>
-            <div class="col">
-              <label for="lotacao" class="form-label">Lotação</label>
-              <select class="form-select" id="lotacao" aria-label="lotacao" required>
-                <option selected>Selecione Lotação...</option>
-                <option value="opcao1">Opção 1</option>
-                <option value="opcao2">Opção 2</option>
-                <option value="opcao3">Opção 3</option>
-              </select>
-            </div>
-            <div class="col-3">
-              <label for="fone_pessoal" class="form-label">Telefone</label>
-              <input type="tel" class="form-control" id="fone_pessoal" placeholder="EX: (XX) XXXXX-XXXX" maxlength="15" required oninput="this.value = formatarTelefone(this.value)">
-            </div>
+          <div class="mb-1">
+            <label for="cpf" class="form-label">CPF</label>
+            <input type="text" class="form-control" id="cpf" placeholder="Somente números. EX: 00011122233" maxlength="14" required>
           </div>
-          <div class="mb-3"></div>
+          <div class="mb-2">
+            <label for="funcao" class="form-label">Função</label>
+            <input type="text" class="form-control" id="função" placeholder="Digite a função do servidor" maxlength="45" required>
+          </div>
+          <div class="mb-2">
+            <label for="select-example" class="form-label">Lotação</label>
+            <select class="form-select" id="select-example" aria-label="Exemplo de seleção" required>
+              <option selected>Selecione uma lotação...</option>
+              <option value="opcao1">Opção 1</option>
+              <option value="opcao2">Opção 2</option>
+              <option value="opcao3">Opção 3</option>
+            </select>
+          </div>
+          <div class="mb-1">
+            <label for="fone_pessoal" class="form-label">Telefone pessoal</label>
+            <input type="tel" class="form-control" id="fone_pessoal" placeholder="Somente número. EX: (XX) XXXXX-XXXX" maxlength="15" required oninput="this.value = formatarTelefone(this.value)">
+          </div>
           <div class="mb-2">
             <button type="submit" class="btn btn-primary" id="btn-salvar-servidor"> SALVAR </button>
           </div>

@@ -13,6 +13,7 @@
   <style>
     .Cabecalho {
     color: white;
+    margin-left: 23px;
 }
 
 .mb-2 {
@@ -28,15 +29,15 @@
 
 </head>
 <body>
-    <header><div><h1 class="Cabecalho">CADASTRO DE NOVA UNIDADE ESCOLAR</h1></div></header>
+    <header><div><h2 class="Cabecalho">CADASTRO DE NOVA UNIDADE ESCOLAR</h2></div></header>
     <div class="container-fluid">
         <form id="form-cadastro">
             <div class="mb-2 col-4">
                 <label for="descricao" class="form-label">Descrição</label>
-                <textarea class="form-control" id="descricao" name="descricao" placeholder="Digite a descrição da unidade" maxlength="70" rows="2" style="white-space: pre-wrap;"></textarea>
+                <input type="text" class="form-control" id="descricao" name="descricao" placeholder="Descrição da unidade" maxlength="70" rows="2" style="white-space: pre-wrap;">
             </div>
           <div class="mb-2">
-            <label for="select-example" class="form-label">Municípío</label>
+            <label for="select-example" class="form-label">Município</label>
             <select class="form-select" id="select-example" aria-label="Exemplo de seleção" required>
               <option selected>Selecione um município...</option>
               <option value="opcao1">Opção 1</option>
