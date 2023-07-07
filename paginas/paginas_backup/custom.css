@@ -11,18 +11,19 @@ a, i{
 
 
 #header{
-    height: 70px;
+    height: 150px;
 }
 
 #main{
     margin-top: 10px;
     padding: 10px;
-    width: 300px;
+    width: 380px;
+    margin-bottom: 50px;
 }
 
 #caixa-login{
     border: 2px solid black;
-    height:auto;
+    height: 420px;
     padding: 10px;
     margin: 0;
     border-radius: 25px;
@@ -45,39 +46,36 @@ a, i{
 
 #btn-entrar{
     width: 150px;
-    margin-top: 20px;
 }
 
 #rodape{
     position: absolute;
     bottom: 0;
-}
 
+}
 
 #area-meio{
     margin: 0;
     padding: 10px;
-    height: auto;
+    height: 65vh;
     background-color: #729ee0;
-    
 }
 #painel{
     padding: 5px;
-    height: 78vh;
 }
 #painel1{
     padding: 5px;
     border-radius: 10px;
     background-color: #3c3c3c;
     border: solid 1px;
-    height: auto;
+    height: 61vh;
 }
 #painel2{
     padding: 20px;
     border-radius: 10px;
     background-color: #3c3c3c;
     scroll-snap-align: start;
-    height: auto;
+    height: 61vh;
     margin-left: 5px;
 
 }
@@ -91,7 +89,6 @@ a, i{
     padding: 10px;
     margin: 3px;
     font-weight: bold;
-    font-size: 14px;
     border-radius: 5px;
 }
 #item-menu:hover{
