@@ -53,11 +53,13 @@ a, i{
     bottom: 0;
 }
 
+
 #area-meio{
     margin: 0;
     padding: 10px;
     height:auto;
     background-color: #729ee0;
+    
 }
 #painel{
     padding: 5px;

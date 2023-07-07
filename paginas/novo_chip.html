@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novo Produto</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="custom.css">
+
+  <style>
+    .Cabecalho {
+      color: white;
+      margin-left: 23px;
+    }
+
+    .mb-2 {
+      margin-bottom: 2rem;
+      margin-right: 10rem;
+      width: 50%;
+    }
+
+    .form-label {
+      color: aliceblue;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div>
+      <h2 class="Cabecalho">CADASTRO DE CHIP CORPORATIVO</h2>
+    </div>
+  </header>
+  <div class="container-fluid">
+    <form id="form-cadastro">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="iccid" class="form-label">ICCID</label>
+            <input type="text" class="form-control" placeholder="Digite O ICCID do chip" maxlength="45" required>
+          </div>
+          <div class="mb-3">
+            <label for="fabricante" class="form-label">Operadora</label>
+            <input type="text" class="form-control" id="fabricante" placeholder="Digite o nome da operadora"
+              maxlength="45" required>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="tipo" class="form-label">Tipo de Chip</label>
+            <select class="form-select" id="tipo" name="tipo" required>
+              <option value="">Selecione o tipo de chip:</option>
+              <option value="Dados">Dados</option>
+              <option value="Telefonia">Telefonia</option>
+            </select>
+          </div>
+          
+          <div class="mb-3">
+            <label for="numero" class="form-label">Número
+            </label>
+            <input type="text" class="form-control" id="numero" placeholder="Digite o número" maxlength="14" required>
+          </div>
+        </div>
+          <div class="mb-2">
+            <button type="submit" class="btn btn-primary" id="btn-salvar-produto"> SALVAR </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

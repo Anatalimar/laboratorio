@@ -1,64 +1,362 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Nova Unidade</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nova Unidade</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
 
-	<link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="custom.css" />
 
-  <style>
-    .Cabecalho {
-    color: white;
-    margin-left: 23px;
-}
+    <style>
+      .Cabecalho {
+        color: white;
+        margin-left: 23px;
+      }
 
-.mb-2 {
-    margin-bottom: 2rem;
-    margin-right: 10rem;
-    width: 50%;
-}
+      .mb-2 {
+        margin-bottom: 2rem;
+        margin-right: 10rem;
+        width: 50%;
+      }
 
-.form-label{
-  color: aliceblue;
-}
-  </style>
-
-</head>
-<body>
-    <header><div><h2 class="Cabecalho">CADASTRO DE NOVA UNIDADE ESCOLAR</h2></div></header>
+      .form-label {
+        color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div><h2 class="Cabecalho">CADASTRO DE NOVA UNIDADE ESCOLAR</h2></div>
+    </header>
     <div class="container-fluid">
-        <form id="form-cadastro">
-            <div class="mb-2 col-4">
-                <label for="descricao" class="form-label">Descrição</label>
-                <input type="text" class="form-control" id="descricao" name="descricao" placeholder="Descrição da unidade" maxlength="70" rows="2" style="white-space: pre-wrap;">
-            </div>
-          <div class="mb-2">
-            <label for="select-example" class="form-label">Município</label>
-            <select class="form-select" id="select-example" aria-label="Exemplo de seleção" required>
-              <option selected>Selecione um município...</option>
-              <option value="opcao1">Opção 1</option>
-              <option value="opcao2">Opção 2</option>
-              <option value="opcao3">Opção 3</option>
-            </select>
-          </div>
-          <div class="mb-2">
-            <label for="select-example" class="form-label">Setor</label>
-            <select class="form-select" id="select-example" aria-label="Exemplo de seleção" required>
-              <option selected>Selecione um setor...</option>
-              <option value="opcao1">Opção 1</option>
-              <option value="opcao2">Opção 2</option>
-              <option value="opcao3">Opção 3</option>
-            </select>
-          </div>
-          <div class="mb-2">
-            <button type="submit" class="btn btn-primary" id="btn-salvar-unidade"> SALVAR </button>
-          </div>
-        </form>
-      </div>
-
-</body>
+      <form id="form-cadastro">
+        <div class="mb-2 col-4">
+          <label for="descricao" class="form-label">Descrição</label>
+          <input
+            type="text"
+            class="form-control"
+            id="descricao"
+            name="descricao"
+            placeholder="Descrição da unidade"
+            maxlength="70"
+            rows="2"
+            style="white-space: pre-wrap"
+          />
+        </div>
+        <div class="mb-2 col-4">
+          <label for="sigla" class="form-label">Sigla/Nome reduzido</label>
+          <input
+            type="text"
+            class="form-control"
+            id="sigla"
+            name="sigla"
+            placeholder="Sigla ou nome reduzido..."
+            maxlength="70"
+            rows="2"
+            style="white-space: pre-wrap"
+          />
+        </div>
+        <div class="mb-2">
+          <label for="select-example" class="form-label">Município</label>
+          <select
+            class="form-select"
+            id="select-example"
+            aria-label="Exemplo de seleção"
+            required
+          >
+            <option selected>Selecione um município...</option>
+            <option value="ALVARÃES">ALVARÃES</option>
+            <option value="AMATURÁ">AMATURÁ</option>
+            <option value="ANAMÃ">ANAMÃ</option>
+            <option value="ANORI">ANORI</option>
+            <option value="APUÍ">APUÍ</option>
+            <option value="ATALAIA DO NORTE">ATALAIA DO NORTE</option>
+            <option value="AUTAZES">AUTAZES</option>
+            <option value="BOCA DO ACRE">BOCA DO ACRE</option>
+            <option value="BARREIRINHA">BARREIRINHA</option>
+            <option value="BARCELOS">BARCELOS</option>
+            <option value="BENJAMIN CONSTANT">BENJAMIN CONSTANT</option>
+            <option value="BERURI">BERURI</option>
+            <option value="BORBA">BORBA</option>
+            <option value="BOA VISTA DO RAMOS">BOA VISTA DO RAMOS</option>
+            <option value="CAAPIRANGA">CAAPIRANGA</option>
+            <option value="CANUTAMA">CANUTAMA</option>
+            <option value="CAREIRO">CAREIRO</option>
+            <option value="CARAUARI">CARAUARI</option>
+            <option value="CAREIRO DA VÁRZEA">CAREIRO DA VÁRZEA</option>
+            <option value="CODAJÁS">CODAJÁS</option>
+            <option value="COARI">COARI</option>
+            <option value="EIRUNEPÉ">EIRUNEPÉ</option>
+            <option value="ENVIRA">ENVIRA</option>
+            <option value="FONTE BOA">FONTE BOA</option>
+            <option value="GUAJARÁ">GUAJARÁ</option>
+            <option value="HUMAITÁ">HUMAITÁ</option>
+            <option value="IPIXUNA">IPIXUNA</option>
+            <option value="IRANDUBA">IRANDUBA</option>
+            <option value="ITACOATIARA">ITACOATIARA</option>
+            <option value="ITAPIRANGA">ITAPIRANGA</option>
+            <option value="ITAMARATI">ITAMARATI</option>
+            <option value="JAPURÁ">JAPURÁ</option>
+            <option value="JURUÁ">JURUÁ</option>
+            <option value="JUTAÍ">JUTAÍ</option>
+            <option value="LÁBREA">LÁBREA</option>
+            <option value="MANAUS">MANAUS</option>
+            <option value="MARAÃ">MARAÃ</option>
+            <option value="MAUÉS">MAUÉS</option>
+            <option value="MANICORÉ">MANICORÉ</option>
+            <option value="MANAQUIRI">MANAQUIRI</option>
+            <option value="MANACAPURU">MANACAPURU</option>
+            <option value="NOVO AIRÃO">NOVO AIRÃO</option>
+            <option value="NOVO ARIPUANÃ">NOVO ARIPUANÃ</option>
+            <option value="NHAMUNDÁ">NHAMUNDÁ</option>
+            <option value="NOVA OLINDA DO NORTE">NOVA OLINDA DO NORTE</option>
+            <option value="PRESIDENTE FIGUEIREDO">PRESIDENTE FIGUEIREDO</option>
+            <option value="PARINTINS">PARINTINS</option>
+            <option value="PAUINI">PAUINI</option>
+            <option value="RIO PRETO DA EVA">RIO PRETO DA EVA</option>
+            <option value="SANTO ANTÔNIO DO IÇÁ">SANTO ANTÔNIO DO IÇÁ</option>
+            <option value="SÃO GABRIEL DA CACHOEIRA">
+              SÃO GABRIEL DA CACHOEIRA
+            </option>
+            <option value="SILVES">SILVES</option>
+            <option value="SÃO PAULO DE OLIVENÇA">SÃO PAULO DE OLIVENÇA</option>
+            <option value="SÃO SEBASTIÃO DE UATUMÃ">
+              SÃO SEBASTIÃO DE UATUMÃ
+            </option>
+            <option value="SANTA ISABEL DO RIO NEGRO">
+              SANTA ISABEL DO RIO NEGRO
+            </option>
+            <option value="TABATINGA">TABATINGA</option>
+            <option value="TEFÉ">TEFÉ</option>
+            <option value="TONANTINS">TONANTINS</option>
+            <option value="TAPAUÁ">TAPAUÁ</option>
+            <option value="UARINI">UARINI</option>
+            <option value="URUCURITUBA">URUCURITUBA</option>
+            <option value="URUCARÁ">URUCARÁ</option>
+          </select>
+        </div>
+        <div class="mb-2">
+          <label for="select-example" class="form-label"
+            >Coordenadoria/Sede</label
+          >
+          <select
+            class="form-select"
+            id="select-example"
+            aria-label="Exemplo de seleção"
+            required
+          >
+            <option selected>Selecione...</option>
+            <option value="SEDE">SEDE</option>
+            <option value="CDE1">COORDENADORIA DISTRITAL DE EDUCAÇÃO 01</option>
+            <option value="CDE2">COORDENADORIA DISTRITAL DE EDUCAÇÃO 02</option>
+            <option value="CDE3">COORDENADORIA DISTRITAL DE EDUCAÇÃO 03</option>
+            <option value="CDE4">COORDENADORIA DISTRITAL DE EDUCAÇÃO 04</option>
+            <option value="CDE5">COORDENADORIA DISTRITAL DE EDUCAÇÃO 05</option>
+            <option value="CDE6">COORDENADORIA DISTRITAL DE EDUCAÇÃO 06</option>
+            <option value="CDE7">COORDENADORIA DISTRITAL DE EDUCAÇÃO 07</option>
+            <option value="CRE ALVARÃES">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE ALVARÃES
+            </option>
+            <option value="CRE AMATURÁ">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE AMATURÁ
+            </option>
+            <option value="CRE ANAMÃ">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE ANAMÃ
+            </option>
+            <option value="CRE ANORI">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE ANORI
+            </option>
+            <option value="CRE APUÍ">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE APUÍ
+            </option>
+            <option value="CRE ATALAIA DO NORTE">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE ATALAIA DO NORTE
+            </option>
+            <option value="CRE AUTAZES">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE AUTAZES
+            </option>
+            <option value="CRE BOCA DO ACRE">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE BOCA DO ACRE
+            </option>
+            <option value="CRE BARREIRINHA">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE BARREIRINHA
+            </option>
+            <option value="CRE BARCELOS">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE BARCELOS
+            </option>
+            <option value="CRE BENJAMIN CONSTANT">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE BENJAMIN CONSTANT
+            </option>
+            <option value="CRE BERURI">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE BERURI
+            </option>
+            <option value="CRE BORBA">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE BORBA
+            </option>
+            <option value="CRE BOA VISTA DO RAMOS">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE BOA VISTA DO RAMOS
+            </option>
+            <option value="CRE CAAPIRANGA">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE CAAPIRANGA
+            </option>
+            <option value="CRE CANUTAMA">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE CANUTAMA
+            </option>
+            <option value="CRE CAREIRO">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DO CAREIRO
+            </option>
+            <option value="CRE CARAUARI">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE CARAUARI
+            </option>
+            <option value="CRE CAREIRO DA VÁRZEA">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DO CAREIRO DA VÁRZEA
+            </option>
+            <option value="CRE CODAJÁS">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE CODAJÁS
+            </option>
+            <option value="CRE COARI">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE COARI
+            </option>
+            <option value="CRE EIRUNEPÉ">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE EIRUNEPÉ
+            </option>
+            <option value="CRE ENVIRA">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE ENVIRA
+            </option>
+            <option value="CRE FONTE BOA">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE FONTE BOA
+            </option>
+            <option value="CRE GUAJARÁ">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE GUAJARÁ
+            </option>
+            <option value="CRE HUMAITÁ">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE HUMAITÁ
+            </option>
+            <option value="CRE IPIXUNA">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE IPIXUNA
+            </option>
+            <option value="CRE IRANDUBA">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE IRANDUBA
+            </option>
+            <option value="CRE ITACOATIARA">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE ITACOATIARA
+            </option>
+            <option value="CRE ITAPIRANGA">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE ITAPIRANGA
+            </option>
+            <option value="CRE ITAMARATI">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE ITAMARATI
+            </option>
+            <option value="CRE JAPURÁ">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE JAPURÁ
+            </option>
+            <option value="CRE JURUÁ">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE JURUÁ
+            </option>
+            <option value="CRE JUTAÍ">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE JUTAÍ
+            </option>
+            <option value="CRE LÁBREA">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE LÁBREA
+            </option>
+            <option value="CRE MARAÃ">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE MARAÃ
+            </option>
+            <option value="CRE MAUÉS">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE MAUÉS
+            </option>
+            <option value="CRE MANICORÉ">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE MANICORÉ
+            </option>
+            <option value="CRE MANAQUIRI">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE MANAQUIRI
+            </option>
+            <option value="CRE MANACAPURU">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE MANACAPURU
+            </option>
+            <option value="CRE NOVO AIRÃO">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE NOVO AIRÃO
+            </option>
+            <option value="CRE NOVO ARIPUANÃ">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE NOVO ARIPUANÃ
+            </option>
+            <option value="CRE NHAMUNDÁ">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE NHAMUNDÁ
+            </option>
+            <option value="CRE NOVA OLINDA DO NORTE">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE NOVA OLINDA DO NORTE
+            </option>
+            <option value="CRE PRESIDENTE FIGUEIREDO">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE PRESIDENTE FIGUEIREDO
+            </option>
+            <option value="CRE PARINTINS">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE PARINTINS
+            </option>
+            <option value="CRE PAUINI">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE PAUINI
+            </option>
+            <option value="CRE RIO PRETO DA EVA">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE RIO PRETO DA EVA
+            </option>
+            <option value="CRE SANTO ANTÔNIO DO IÇÁ">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE SANTO ANTÔNIO DO IÇÁ
+            </option>
+            <option value="CRE SÃO GABRIEL DA CACHOEIRA">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE SÃO GABRIEL DA CACHOEIRA
+            </option>
+            <option value="CRE SILVES">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE SILVES
+            </option>
+            <option value="CRE SÃO PAULO DE OLIVENÇA">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE SÃO PAULO DE OLIVENÇA
+            </option>
+            <option value="CRE SÃO SEBASTIÃO DE UATUMÃ">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE SÃO SEBASTIÃO DE UATUMÃ
+            </option>
+            <option value="CRE SANTA ISABEL DO RIO NEGRO">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE SANTA ISABEL DO RIO NEGRO
+            </option>
+            <option value="CRE TABATINGA">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE TABATINGA
+            </option>
+            <option value="CRE TEFÉ">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE TEFÉ
+            </option>
+            <option value="CRE TONANTINS">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE TONANTINS
+            </option>
+            <option value="CRE TAPAUÁ">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE TAPAUÁ
+            </option>
+            <option value="CRE UARINI">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE UARINI
+            </option>
+            <option value="CRE URUCURITUBA">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE URUCURITUBA
+            </option>
+            <option value="CRE URUCARÁ">
+              COORDENADORIA REGIONAL DE EDUCAÇÃO DE URUCARÁ
+            </option>
+          </select>
+        </div>
+        <div class="mb-2">
+          <button type="submit" class="btn btn-primary" id="btn-salvar-unidade">
+            SALVAR
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>

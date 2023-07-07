@@ -5,8 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>GEC - Menu Principal</title>
-	
+
 </head>
+
 <body>
     <div class="conteiner-fluid" id="cabecalho">
         <header class="row" id="header">
@@ -42,7 +43,11 @@
                     </div>
                     <div class="col" id="item-menu">
                         <img src="../imagens/eqp_info.png" width="30" height="30">
-                        <a href="principal.php?pagina=7">NOVO MATERIAL</a>
+                        <a href="principal.php?pagina=7">EQUIPAMENTO</a>
+                    </div>
+                    <div class="col" id="item-menu">
+                        <img src="../imagens/eqp_info.png" width="30" height="30">
+                        <a href="principal.php?pagina=8">CHIP CORPORATIVO</a>
                     </div>
                     <div class="col" id="item-menu">
                         <img src="../imagens/exit.png" width="30" height="30">
@@ -58,10 +63,10 @@
                         case '3': include_once('checar_registro.html'); break;
                         case '4': include_once('novo_setor.html'); break;
                         case '5': include_once('nova_unidade.html'); break;
-                        case '6': include_once('novo_registro.html'); break;
-                        case '7': include_once('novo_produto.html'); break;
-                        case '8': include_once('novo_serv.html'); break;
-                        case '9': header('Location: index.php'); exit; break;
+                        case '6': include_once('nova_cautela.html'); break;
+                        case '7': include_once('novo_equipamento.html'); break;
+                        case '8': include_once('novo_chip.html'); break;
+                        case '9': header('Location: index.php'); exit;
                         default: include_once('tela_padrao.html'); break;
                     }
                     ?>
