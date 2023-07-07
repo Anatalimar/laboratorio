@@ -42,12 +42,13 @@
       <form id="form-cadastro" action="validacao.php">
           <div class="mb-2">
               <label for="usuario" class="form-label">Usuário</label>
-              <input type="text" class="form-control" placeholder="Informe nome do usuário" maxlength="30" required>
+              <input type="hidden" name="opcao" value="1" required>
+              <input type="text" class="form-control" name="usuario" placeholder="Informe nome do usuário" maxlength="30" required>
           </div>
           <div class="mb-2">
               <label for="senha" class="form-label">Senha</label>
               <div class="input-group">
-                  <input type="password" class="form-control" id="senha" placeholder="Digite uma senha" maxlength="45" required>
+                  <input type="password" class="form-control" name="senha" placeholder="Digite uma senha" maxlength="45" required>
                   <button class="btn btn-outline-secondary" type="button" id="btn-toggle-senha">
                     <i class="bi bi-eye"></i>
                 </button>
@@ -56,7 +57,7 @@
           <div class="mb-2">
               <label for="confirmar_senha" class="form-label">Confirmar senha</label>
               <div class="input-group">
-                  <input type="password" class="form-control" id="confirmar_senha" placeholder="Digite a senha novamente" maxlength="45" required>
+                  <input type="password" class="form-control" placeholder="Digite a senha novamente" maxlength="45" required>
                   <button class="btn btn-outline-secondary" type="button" id="btn-toggle-confirmar-senha">
                     <i class="bi bi-eye"></i>
                 </button>
@@ -66,11 +67,11 @@
           </div>
           <div class="mb-2">
               <label for="email" class="form-label">E-mail</label>
-              <input type="email" class="form-control" placeholder="Digite um e-mail" maxlength="100" required>
+              <input type="email" class="form-control" name="email" placeholder="Digite um e-mail" maxlength="100" required>
           </div>
           <div class="mb-2">
               <label for="select-example" class="form-label">Nível de Acesso</label>
-              <select class="form-select" id="nivel_acesso" aria-label="Exemplo de seleção" required>
+              <select class="form-select" name="nivel_acesso" aria-label="Exemplo de seleção" required>
                 <option selected>Selecione um Nível e Acesso.</option>
                 <option value="Atendente">Atendente</option>
                 <option value="Suporte">Suporte</option>

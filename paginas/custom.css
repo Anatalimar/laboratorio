@@ -8,10 +8,29 @@ a, i{
     text-decoration: none;
     color: black;
 }
-
+#fundo_pagina{
+    background-image: url(../imagens/bacck2mauri.png);
+    background-size: cover;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+}
 
 #header{
-    height: 70px;
+    height: 100px;
+    padding: 10px;
+}
+#logo{
+    width: 130px;
+    margin-left: 110px;
+}
+#titulo_pagina{
+    width: 200px;
+    margin-left: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 58px;
+    font-weight: bold;
+    text-shadow: gray;
 }
 
 #main{
@@ -63,7 +82,7 @@ a, i{
 }
 #painel{
     padding: 5px;
-    height: 78vh;
+    height: 75vh;
 }
 #painel1{
     padding: 5px;

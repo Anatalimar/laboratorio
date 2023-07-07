@@ -108,6 +108,7 @@ CREATE TABLE IF NOT EXISTS `db_gesi`.`usuario` (
   `usu_nome` VARCHAR(30) NOT NULL,
   `usu_senha` VARCHAR(45) NOT NULL,
   `usu_email` VARCHAR(100) NOT NULL,
+  `usu_nivel_acesso` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`usu_codigo`))
 ENGINE = InnoDB;
 

@@ -16,7 +16,12 @@
 <body>
     <div class="conteiner-fluid" id="cabecalho">
         <header class="row" id="header">
-            <div id="logo-container"><img src="#" alt="" id="logo"></div>
+            <div id="logo-container justify-content-center">
+                <div class="row">
+                    <div class="col-2" id="logo"><img src="../imagens/logo_am.png" height="80px" width="55px"></div>
+                    <div class="col" id="titulo_pagina">SECRETARIA DE EDUCAÇÃO E DESPORTO ESCOLAR</div>
+                </div>
+            </div>
         </header>
     </div>
     <div class="conteiner-fluid" id="area-meio">
@@ -61,23 +66,21 @@
                 </div>
                 <div class="col" id="painel2">
                     <?php
-                    $pag = @$_REQUEST['pagina'];
-                    switch($pag){
-                        case '1': include_once('novo_usuario.html'); break;
-                        case '2': include_once('novo_servidor.html'); break;
-                        case '3': include_once('checar_registro.html'); break;
-                        case '4': include_once('novo_setor.html'); break;
-                        case '5': include_once('nova_unidade.html'); break;
-                        case '6': include_once('nova_cautela.html'); break;
-                        case '7': include_once('novo_equipamento.html'); break;
-                        case '8': include_once('novo_chip.html'); break;
-                        case '9': header('Location: index.php'); exit;
-                        default: include_once('tela_padrao.html'); break;
+                        $pag = @$_REQUEST['pagina'];
+                        switch($pag){
+                            case '1': include_once('novo_usuario.html'); break;
+                            case '2': include_once('novo_servidor.html'); break;
+                            case '3': include_once('checar_registro.html'); break;
+                            case '4': include_once('novo_setor.html'); break;
+                            case '5': include_once('nova_unidade.html'); break;
+                            case '6': include_once('nova_cautela.html'); break;
+                            case '7': include_once('novo_equipamento.html'); break;
+                            case '8': include_once('novo_chip.html'); break;
+                            case '9': header('Location: index.php'); break;
+                            default: include_once('tela_padrao.html'); break;
                     }
                     ?>
 
-
-                    
                 </div>
             </div>
         </div>

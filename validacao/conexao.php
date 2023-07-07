@@ -28,7 +28,7 @@ function executar($sql)
     
 function consultar($tabela, $campos = "*", $condicao = null)
 {
-    $sql = "selction {$campos} from {$tabela} {$condicao}";
+    $sql = "select {$campos} from {$tabela} {$condicao}";
     $qry = executar($sql);
         
     if(!mysqli_affected_rows($qry))
