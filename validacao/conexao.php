@@ -82,13 +82,18 @@ function erros_conexao($erro_numero){
 function redireciona($resp){
     if($resp == 0)
     {
-        sleep(5);
+        sleep(3);
+        header("Refresh: 5, ../index.php");
+    }
+    elseif($resp == 1)
+    {
+        sleep(3);
         header("Refresh: 5, ../paginas/principal.php");
     }
-    else
+    elseif($resp == 2)
     {
-        sleep(5);
-        header("Refresh: 5, ../index.php");
+        sleep(3);
+        header("Refresh: 5, ../paginas/principal.php?pagina=1");
     }
 }
 
