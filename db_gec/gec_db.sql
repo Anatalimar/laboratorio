@@ -34,14 +34,10 @@ CREATE TABLE IF NOT EXISTS `db_gesi`.`servidor` (
   `ser_cpf` VARCHAR(14) NOT NULL,
   `ser_nome` VARCHAR(45) NOT NULL,
   `ser_funcao` VARCHAR(45) NOT NULL,
-  `ser_unidade` INT NOT NULL,
-  `ser_fone_cotato` VARCHAR(15) NOT NULL,
-  `ser_fone_coorp` VARCHAR(15) NULL,
-  PRIMARY KEY (`ser_matricula`),
-    FOREIGN KEY (`ser_unidade`)
-    REFERENCES `db_gesi`.`unidade` (`und_codigo`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  `ser_unidade` VARCHAR(70) NOT NULL,
+  `ser_fone_contato` VARCHAR(15) NOT NULL,
+  `ser_fone_corp` VARCHAR(15) NULL,
+  PRIMARY KEY (`ser_matricula`))
 ENGINE = InnoDB;
 
 

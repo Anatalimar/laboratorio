@@ -40,7 +40,7 @@
           <div class="row justify-content align-items-center g-2">
             <div class="col-2">
               <label for="matricula" class="form-label">Matricula</label>
-              <input type="text" class="form-control" id="matricula" name="matricula" placeholder="000000-A0" maxlength="10" required>  
+              <input type="text" class="form-control" id="matricula" name="matricula" placeholder="000000-A0" maxlength="7" required>  
             </div>
             <div class="col-3">
               <label for="cpf" class="form-label">CPF</label>
