@@ -4,12 +4,23 @@ include_once('../validacao/conexao.php');
 
 $opcao = @$_REQUEST['opcao'];
 
+/**
+ * Summary of msg
+ * @param mixed $texto
+ * @return void
+ */
 function msg($texto)
 {
     $msg = "<div class='container mt-4'><div class='alert alert-info' role='alert'></div></div>";
 }
 
-function exibirJanela($mensagem) {
+/**
+ * Summary of exibirJanela
+ * @param mixed $mensagem
+ * @return void
+ */
+function exibirJanela($mensagem)
+{
     echo "<script>
             function showModal(message) {
                 var modal = document.createElement('div');
@@ -31,7 +42,13 @@ function exibirJanela($mensagem) {
         </script>";
 }
 
-function exibirDialogo($mensagem) {
+/**
+ * Summary of exibirDialogo
+ * @param mixed $mensagem
+ * @return void
+ */
+function exibirDialogo($mensagem)
+{
     echo "<script>
             // Chama a função de diálogo
             alert('" . $mensagem . "');
@@ -39,39 +56,76 @@ function exibirDialogo($mensagem) {
 }
 
 
-switch($opcao){
+switch ($opcao) {
+    /* TELA DE CADASTRO DE USUARIO */
     case 1:
         $nusuario = $_REQUEST['usuario'];
         $nsenha = $_REQUEST['senha'];
         $nemail = $_REQUEST['email'];
         $nacesso = $_REQUEST['nivel_acesso'];
-        
+
         $status = false;
         $msg = "";
         $num = 1;
         $sql = "Select * from usuario";
         $conexao = abrirConexao();
         $resultado = mysqli_query($conexao, $sql);
-        while($registro = mysqli_fetch_array($resultado))
-        {
-            if(($nusuario == $registro['usu_nome'])){
+        while ($registro = mysqli_fetch_array($resultado)) {
+            if (($nusuario == $registro['usu_nome'])) {
                 $status = true;
                 $num = 0;
             }
         }
-        if($status){
+        if ($status) {
             exibirDialogo("Usuário já cadastrado no sistema.");
             redireciona(2);
-        }
-        else
-        {
+        } else {
             $sql = "insert into usuario(usu_nome, usu_senha, usu_email, usu_nivel_acesso) values('$nusuario', '$nsenha', '$nemail', '$nacesso')";
             $exec = mysqli_query($conexao, $sql);
             exibirDialogo("Usuário cadastrado com sucesso no sistema.");
             redireciona(2);
         }
-        fecharConexao($conexao); break;
-    default: echo "nada de efeito."; break;
+        fecharConexao($conexao);
+        break;
+
+    /* TELA DE CADASTRO DE SERVIDOR */
+    case 2:
+        $nmatricula = $_REQUEST['matricula'];
+        $ncpf = $_REQUEST['cpf'];
+        $nnome = $_REQUEST['nome'];
+        $nfuncao = $_REQUEST['funcao'];
+        $nlotacao = $_REQUEST['lotacao'];
+        $nfone_pessoal = $_REQUEST['fone_pessoal'];
+        $nfone_corp = $_REQUEST['fone_corp'];
+
+        $status = false;
+        $msg = "";
+        $num = 1;
+        $sql = "Select * from servidor";
+        $conexao = abrirConexao();
+        $resultado = mysqli_query($conexao, $sql);
+
+        while ($registro = mysqli_fetch_array($resultado)) {
+            if (($nmatricula == $registro['ser_matricula'])) {
+                $status = true;
+                $num = 0;
+            }
+        }
+        if ($status) {
+            exibirDialogo("Servidor já cadastrado no sistema.");
+            redireciona(3);
+        } else {
+            $sql = "insert into servidor(ser_nome, ser_cpf, ser_matricula, ser_funcao, ser_unidade, ser_fone_cotato, ser_fone_coorp) values('$nnome', '$ncpf', '$nmatricula', '$nfuncao', '$nlotacao', '$nfone_pessoal', '$nfone_corp')";
+
+            $exec = mysqli_query($conexao, $sql);
+            exibirDialogo("Servidor cadastrado com sucesso no sistema.");
+            redireciona(3);
+        }
+        fecharConexao($conexao);
+        break;
+    default:
+        echo "nada de efeito.";
+        break;
 
 }
 ?>

@@ -34,28 +34,29 @@
 <body>
     <header><div><h2 class="Cabecalho">CADASTRO DE NOVO SERVIDOR</h2></div></header>
     <div class="container-fluid">
-        <form id="form-cadastro">
+        <form id="form-cadastro" action="validacao.php">
+          <input type="hidden" name="opcao" value="2" required>
           <div class="mb-3"></div>
           <div class="row justify-content align-items-center g-2">
             <div class="col-2">
               <label for="matricula" class="form-label">Matricula</label>
-              <input type="text" class="form-control" id="matricula" placeholder="000000-A0" maxlength="10" required>  
+              <input type="text" class="form-control" id="matricula" name="matricula" placeholder="000000-A0" maxlength="10" required>  
             </div>
             <div class="col-3">
               <label for="cpf" class="form-label">CPF</label>
-              <input type="text" class="form-control" id="cpf" placeholder="EX: 00011122233" maxlength="14" required>
+              <input type="text" class="form-control" id="cpf" name="cpf" placeholder="EX: 00011122233" maxlength="14" required>
             </div>
             <div class="col">
               <label for="nome" class="form-label">Nome Completo</label>
-              <input type="text" class="form-control" id="nome" placeholder="Nome completo do servidor" maxlength="45" required>
+              <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome completo do servidor" maxlength="45" required>
             </div>
           </div>
           <div class="mb-3"></div>
           <div class="row justify-content align-items-center g-2">
             <div class="col-3">
               <label for="funcao" class="form-label">Função</label>
-              <select class="form-select" id="funcao" aria-label="funcao" required>
-                <option selected>Selecione Função...</option>
+              <select class="form-select" id="funcao" name="funcao" aria-label="funcao" required>
+                <option disabled selected value>Selecione Função...</option>
                 <option value="opcao1">Opção 1</option>
                 <option value="opcao2">Opção 2</option>
                 <option value="opcao3">Opção 3</option>
@@ -63,16 +64,20 @@
             </div>
             <div class="col">
               <label for="lotacao" class="form-label">Lotação</label>
-              <select class="form-select" id="lotacao" aria-label="lotacao" required>
-                <option selected>Selecione Lotação...</option>
+              <select class="form-select" id="lotacao" name="lotacao" aria-label="lotacao" required>
+                <option disabled selected value>Selecione Lotação...</option>
                 <option value="opcao1">Opção 1</option>
                 <option value="opcao2">Opção 2</option>
                 <option value="opcao3">Opção 3</option>
               </select>
             </div>
             <div class="col-3">
-              <label for="fone_pessoal" class="form-label">Telefone</label>
-              <input type="tel" class="form-control" id="fone_pessoal" placeholder="EX: (XX) XXXXX-XXXX" maxlength="15" required oninput="this.value = formatarTelefone(this.value)">
+              <label for="fone_pessoal" class="form-label">Telefone Pessoal</label>
+              <input type="tel" class="form-control" id="fone_pessoal" name="fone_pessoal" placeholder="EX: (XX) XXXXX-XXXX" maxlength="15" required oninput="this.value = formatarTelefone(this.value)">
+            </div>
+            <div class="col-3">
+              <label for="fone_corp" class="form-label">Telefone Corporativo</label>
+              <input type="tel" class="form-control" id="fone_corp" name="fone_corp" placeholder="EX: (XX) XXXXX-XXXX" maxlength="15" required oninput="this.value = formatarTelefone(this.value)">
             </div>
           </div>
           <div class="mb-3"></div>

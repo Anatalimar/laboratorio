@@ -90,10 +90,15 @@ function redireciona($resp){
         sleep(3);
         header("Refresh: 5, ../paginas/principal.php");
     }
-    elseif($resp == 2)
+    elseif($resp == 2) /* esta diretamente associado no validacao.php dentro do while que checa se o registro ja existe, ambos ifs terao uma resposta que deve ser compativel com o resp daqui*/
     {
         sleep(3);
         header("Refresh: 5, ../paginas/principal.php?pagina=1");
+    }
+    elseif($resp == 3) /* esta diretamente associado no validacao.php dentro do while que checa se o registro ja existe, ambos ifs terao uma resposta que deve ser compativel com o resp daqui*/
+    {
+        sleep(3);
+        header("Refresh: 5, ../paginas/principal.php?pagina=2");
     }
 }
 
