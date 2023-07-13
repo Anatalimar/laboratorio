@@ -57,18 +57,35 @@
               <label for="funcao" class="form-label">Função</label>
               <select class="form-select" id="funcao" name="funcao" aria-label="funcao" required>
                 <option disabled selected value>Selecione Função...</option>
-                <option value="opcao1">Opção 1</option>
-                <option value="opcao2">Opção 2</option>
-                <option value="opcao3">Opção 3</option>
+                <option value="Agente Administrativo">Agente Administrativo</option>
+                <option value="Analista de Dados Educacionais">Analista de Dados Educacionais</option>
+                <option value="Assessor(a) de Comunicação">Assessor(a) de Comunicação</option>
+                <option value="Auxiliar de Serviços Gerais">Auxiliar de Serviços Gerais</option>
+                <option value="Bibliotecário(a) Escolar">Bibliotecário(a) Escolar</option>
+                <option value="Coordenador(a)">Coordenador(a)</option>
+                <option value="Diretor(a)">Diretor(a)</option>
+                <option value="Gerente">Gerente</option>
+                <option value="Inspetor(a) Escolar">Inspetor(a) Escolar</option>
+                <option value="Monitor(a) de Alunos">Monitor(a) de Alunos</option>
+                <option value="Nutricionista Escolar">Nutricionista Escolar</option>
+                <option value="Orientador(a) Educacional">Orientador(a) Educacional</option>
+                <option value="Pedagogo(a)">Pedagogo(a)</option>
+                <option value="Professor(a)">Professor(a)</option>
+                <option value="Psicólogo(a) Escolar">Psicólogo(a) Escolar</option>
+                <option value="Secretário(a) de Educação">Secretário(a) de Educação</option>
+                <option value="Supervisor(a)">Supervisor(a)</option>
               </select>
             </div>
             <div class="col">
               <label for="lotacao" class="form-label">Lotação</label>
               <select class="form-select" id="lotacao" name="lotacao" aria-label="lotacao" required>
                 <option disabled selected value>Selecione Lotação...</option>
-                <option value="opcao1">Opção 1</option>
-                <option value="opcao2">Opção 2</option>
-                <option value="opcao3">Opção 3</option>
+                <?php
+                  require_once 'validacao.php';
+                  $conexao = mysqli_connect("localhost", "root", "", "db_gesi");
+                  carregarSelecao($conexao, "unidade", "und_codigo", "und_descricao");
+                  fecharConexao($conexao);
+                ?>
               </select>
             </div>
             <div class="col-3">

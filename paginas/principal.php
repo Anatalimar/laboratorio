@@ -69,7 +69,7 @@
                         $pag = @$_REQUEST['pagina'];
                         switch($pag){
                             case '1': include_once('novo_usuario.html'); break;
-                            case '2': include_once('novo_servidor.html'); break;
+                            case '2': include_once('novo_servidor.php'); break;
                             case '3': include_once('checar_registro.html'); break;
                             case '4': include_once('novo_setor.html'); break;
                             case '5': include_once('nova_unidade.html'); break;

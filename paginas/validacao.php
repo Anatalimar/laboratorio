@@ -4,21 +4,13 @@ include_once('../validacao/conexao.php');
 
 $opcao = @$_REQUEST['opcao'];
 
-/**
- * Summary of msg
- * @param mixed $texto
- * @return void
- */
+
 function msg($texto)
 {
     $msg = "<div class='container mt-4'><div class='alert alert-info' role='alert'></div></div>";
 }
 
-/**
- * Summary of exibirJanela
- * @param mixed $mensagem
- * @return void
- */
+
 function exibirJanela($mensagem)
 {
     echo "<script>
@@ -42,11 +34,32 @@ function exibirJanela($mensagem)
         </script>";
 }
 
-/**
- * Summary of exibirDialogo
- * @param mixed $mensagem
- * @return void
- */
+function carregarSelecao($conexao, $tabela, $valorColuna, $textoColuna)
+{
+    // Consulta SQL para recuperar os dados da tabela
+    $consulta = "SELECT $valorColuna, $textoColuna FROM $tabela order by und_descricao";
+
+    // Executar a consulta no banco de dados
+    $resultado = mysqli_query($conexao, $consulta);
+
+    // Verificar se a consulta retornou resultados
+    if ($resultado && mysqli_num_rows($resultado) > 0) {
+        // Loop através dos resultados e criar as opções do <select>
+        while ($row = mysqli_fetch_assoc($resultado)) {
+            $valor = $row[$valorColuna];
+            $texto = $row[$textoColuna];
+            echo "<option value=\"$valor\">$texto</option>";
+        }
+    } else {
+        // Caso não haja resultados, exibir uma opção vazia
+        echo "<option value=\"\">Nenhum resultado encontrado</option>";
+    }
+
+    // Liberar a memória ocupada pelo resultado da consulta
+    mysqli_free_result($resultado);
+}
+
+
 function exibirDialogo($mensagem)
 {
     echo "<script>
