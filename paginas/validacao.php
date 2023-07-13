@@ -119,16 +119,19 @@ switch ($opcao) {
         $resultado = mysqli_query($conexao, $sql);
 
         while ($registro = mysqli_fetch_array($resultado)) {
+            exibirDialogo("$nmatricula <br> - ".$registro['ser_matricula']);
+            
             if (($nmatricula == $registro['ser_matricula'])) {
                 $status = true;
                 $num = 0;
             }
         }
+        
         if ($status) {
             exibirDialogo("Servidor já cadastrado no sistema.");
             redireciona(3);
         } else {
-            $sql = "insert into servidor(ser_nome, ser_cpf, ser_matricula, ser_funcao, ser_unidade, ser_fone_cotato, ser_fone_coorp) values('$nnome', '$ncpf', '$nmatricula', '$nfuncao', '$nlotacao', '$nfone_pessoal', '$nfone_corp')";
+            $sql = "insert into servidor(ser_nome, ser_cpf, ser_matricula, ser_funcao, ser_unidade, ser_fone_contato, ser_fone_corp) values('$nnome', '$ncpf', '$nmatricula', '$nfuncao', '$nlotacao', '$nfone_pessoal', '$nfone_corp')";
 
             $exec = mysqli_query($conexao, $sql);
             exibirDialogo("Servidor cadastrado com sucesso no sistema.");
