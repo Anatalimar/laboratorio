@@ -28,7 +28,8 @@
       <div><h2 class="Cabecalho">CADASTRO DE NOVA UNIDADE ESCOLAR</h2></div>
     </header>
     <div class="container-fluid">
-      <form id="form-cadastro">
+      <form id="form-cadastro" action="validacao.php">
+        <input type="hidden" name="opcao" value="5" required>
         <div class="mb-2 col-4">
           <label for="descricao" class="form-label">Descrição</label>
           <input
@@ -59,11 +60,12 @@
           <label for="select-example" class="form-label">Município</label>
           <select
             class="form-select"
-            id="select-example"
+            id="municipio"
+            name="municipio"
             aria-label="Exemplo de seleção"
             required
           >
-            <option selected>Selecione um município...</option>
+            <option disabled selected value>Selecione um município...</option>
             <option value="ALVARÃES">ALVARÃES</option>
             <option value="AMATURÁ">AMATURÁ</option>
             <option value="ANAMÃ">ANAMÃ</option>
@@ -140,11 +142,12 @@
           >
           <select
             class="form-select"
-            id="select-example"
+            id="coord/sede"
+            name="coord/sede"
             aria-label="Exemplo de seleção"
             required
           >
-            <option selected>Selecione...</option>
+            <option disabled selected value>Selecione...</option>
             <option value="SEDE">SEDE</option>
             <option value="CDE1">COORDENADORIA DISTRITAL DE EDUCAÇÃO 01</option>
             <option value="CDE2">COORDENADORIA DISTRITAL DE EDUCAÇÃO 02</option>
@@ -336,6 +339,23 @@
             <option value="CRE URUCARÁ">
               COORDENADORIA REGIONAL DE EDUCAÇÃO DE URUCARÁ
             </option>
+          </select>
+        </div>
+        <div class="mb-2">
+          <label for="select-example" class="form-label"
+            >Condição de Funcionamento</label
+          >
+          <select
+            class="form-select"
+            id="status"
+            name="status"
+            aria-label="Exemplo de seleção"
+            required
+          >
+            <option disabled selected value>Selecione...</option>
+            <option value="ativa">ATIVA</option>
+            <option value="paralisada">PARALISADA</option>
+            <option value="extinta">EXTINTA</option>
           </select>
         </div>
         <div class="mb-2">

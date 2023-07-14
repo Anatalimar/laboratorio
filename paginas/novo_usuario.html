@@ -1,136 +1,147 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Novo Usuário</title>
-  
-  <style>
-    .Cabecalho {
-    color: white;
-    margin-left: 23px;
-}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Novo Usuário</title>
 
-.mb-2 {
-    margin-bottom: 2rem;
-    margin-right: 10rem;
-    width: 40%;
-}
+    <style>
+      .Cabecalho {
+        color: white;
+        margin-left: 23px;
+      }
 
-.form-label{
-  color: aliceblue;
-}
+      .mb-2 {
+        margin-bottom: 2rem;
+        margin-right: 10rem;
+        width: 40%;
+      }
 
-.error{
-  color: red;
-}
-.bi{
-  color:aliceblue
-}
-#btn-toggle-senha,
-#btn-toggle-confirmar-senha {
-  box-shadow: 0 0 0 0.2rem rgba(0, 118, 245, 0.959);
-}
+      .form-label {
+        color: aliceblue;
+      }
 
-  </style>
-
-</head>
-<body>
-    <header><div><h2 class="Cabecalho">CADASTRO DE NOVO USUÁRIO</h2></div></header>
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div><h2 class="Cabecalho">CADASTRO DE NOVO USUÁRIO</h2></div>
+    </header>
     <div class="container-fluid">
       <form id="form-cadastro" action="validacao.php">
-          <div class="mb-2">
-              <label for="usuario" class="form-label">Usuário</label>
-              <input type="hidden" name="opcao" value="1" required>
-              <input type="text" class="form-control" name="usuario" placeholder="Informe nome do usuário" maxlength="30" required>
+        <div class="mb-2">
+          <label for="usuario" class="form-label">Usuário</label>
+          <input type="hidden" name="opcao" value="1" required />
+          <input
+            type="text"
+            class="form-control"
+            name="usuario"
+            placeholder="Informe nome do usuário"
+            maxlength="30"
+            required
+          />
+        </div>
+        <div class="mb-2">
+          <label for="senha" class="form-label">Senha</label>
+          <div class="input-group">
+            <input
+              type="password"
+              class="form-control"
+              name="senha"
+              id="senha"
+              placeholder="Digite uma senha"
+              maxlength="45"
+              required
+            />
+            <button type="button" class="btn btn-secondary" onclick="togglePasswordVisibility('senha')">Mostrar</button>
           </div>
-          <div class="mb-2">
-              <label for="senha" class="form-label">Senha</label>
-              <div class="input-group">
-                  <input type="password" class="form-control" name="senha" placeholder="Digite uma senha" maxlength="45" required>
-                  <button class="btn btn-outline-secondary" type="button" id="btn-toggle-senha">
-                    <i class="bi bi-eye"></i>
-                </button>
-              </div>
+        </div>
+        <div class="mb-2">
+          <label for="confirmar_senha" class="form-label">Confirmar senha</label>
+          <div class="input-group">
+            <input
+              type="password"
+              class="form-control"
+              name="confirmar_senha"
+              id="confirmar_senha"
+              placeholder="Digite a senha novamente"
+              maxlength="45"
+              required
+            />
+            <button type="button" class="btn btn-secondary" onclick="togglePasswordVisibility('confirmar_senha')">Mostrar</button>
           </div>
-          <div class="mb-2">
-              <label for="confirmar_senha" class="form-label">Confirmar senha</label>
-              <div class="input-group">
-                  <input type="password" class="form-control" placeholder="Digite a senha novamente" maxlength="45" required>
-                  <button class="btn btn-outline-secondary" type="button" id="btn-toggle-confirmar-senha">
-                    <i class="bi bi-eye"></i>
-                </button>
-                
-              </div>
-              <div id="erro-senha" class="error"></div>
-          </div>
-          <div class="mb-2">
-              <label for="email" class="form-label">E-mail</label>
-              <input type="email" class="form-control" name="email" placeholder="Digite um e-mail" maxlength="100" required>
-          </div>
-          <div class="mb-2">
-              <label for="select-example" class="form-label">Nível de Acesso</label>
-              <select class="form-select" name="nivel_acesso" aria-label="Exemplo de seleção" required>
-                <option disabled selected value>Selecione um Nível e Acesso.</option>
-                <option value="Atendente">Atendente</option>
-                <option value="Suporte">Suporte</option>
-                <option value="Adminitrador">Administrador</option>
-              </select>
-            </div>
-          <div class="mb-2">
-              <button type="submit" class="btn btn-primary" id="btn-salvar-user">SALVAR</button>
-          </div>
+          <div id="erro-senha" class="error"></div>
+        </div>
+        <div class="mb-2">
+          <label for="email" class="form-label">E-mail</label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            placeholder="Digite um e-mail"
+            maxlength="100"
+            required
+          />
+        </div>
+        <div class="mb-2">
+          <label for="select-example" class="form-label">Nível de Acesso</label>
+          <select
+            class="form-select"
+            name="nivel_acesso"
+            aria-label="Exemplo de seleção"
+            required
+          >
+            <option disabled selected value>
+              Selecione um Nível e Acesso.
+            </option>
+            <option value="Atendente">Atendente</option>
+            <option value="Suporte">Suporte</option>
+            <option value="Adminitrador">Administrador</option>
+          </select>
+        </div>
+        <div class="mb-2">
+          <button type="submit" class="btn btn-primary" id="btn-salvar-user">
+            SALVAR
+          </button>
+        </div>
       </form>
-  </div>
-  
-  <script>
-  function verificarSenhas() {
-    var senha = $("#senha").val();
-    var confirmarSenha = $("#confirmar_senha").val();
-    var erroSenha = $("#erro-senha");
+    </div>
 
-    if (senha !== confirmarSenha) {
-        erroSenha.text("As senhas não coincidem.");
-    } else {
-        erroSenha.text("");
-    }
-}
+    <script>
+      function togglePasswordVisibility(inputId) {
+        var input = document.getElementById(inputId);
+        if (input.type === "password") {
+          input.type = "text";
+        } else {
+          input.type = "password";
+        }
+      }
 
-// Alternar a visibilidade da senha
-function toggleVisibility(inputId, buttonId) {
-    var input = $("#" + inputId);
-    var button = $("#" + buttonId);
+      function verificarSenhas() {
+        var senha = document.getElementById("senha").value;
+        var confirmarSenha = document.getElementById("confirmar_senha").value;
+        var erroSenha = document.getElementById("erro-senha");
 
-    if (input.attr("type") === "password") {
-        input.attr("type", "text");
-        button.html('<i class="bi bi-eye-slash"></i>');
-    } else {
-        input.attr("type", "password");
-        button.html('<i class="bi bi-eye"></i>');
-    }
-}
+        if (senha !== confirmarSenha) {
+          erroSenha.textContent = "As senhas não coincidem.";
+        } else {
+          erroSenha.textContent = "";
+        }
+      }
 
-// Adicionar evento de validação ao formulário
-$("#form-cadastro").submit(function (event) {
-    verificarSenhas();
+      // Adicionar evento de validação ao formulário
+      document.getElementById("form-cadastro").addEventListener("submit", function (event) {
+        verificarSenhas();
 
-    // Verificar se há erro de senha
-    if ($("#erro-senha").text() !== "") {
-        event.preventDefault(); // Impedir o envio do formulário se as senhas não coincidem
-    }
-});
-
-// Adicionar evento de clique no botão de visualização da senha
-$("#btn-toggle-senha").click(function () {
-    toggleVisibility("senha", "btn-toggle-senha");
-});
-
-// Adicionar evento de clique no botão de visualização da senha de confirmação
-$("#btn-toggle-confirmar-senha").click(function () {
-    toggleVisibility("confirmar_senha", "btn-toggle-confirmar-senha");
-});
-  </script>
-  
-</body>
+        // Verificar se há erro de senha
+        if (document.getElementById("erro-senha").textContent !== "") {
+          event.preventDefault(); // Impedir o envio do formulário se as senhas não coincidem
+        }
+      });
+    </script>
+  </body>
 </html>

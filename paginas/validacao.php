@@ -139,6 +139,42 @@ switch ($opcao) {
         }
         fecharConexao($conexao);
         break;
+    /* TELA DE CADASTRO DE UNIDADE */
+    case 5:
+        $ndescricao = $_REQUEST['descricao'];
+        $nsigla = $_REQUEST['sigla'];
+        $nmunicipio = $_REQUEST['municipio'];
+        $ncoord = $_REQUEST['coord/sede'];
+        $nstatus = $_REQUEST['status'];
+
+        $status = false;
+        $msg = "";
+        $num = 1;
+        $sql = "Select * from unidade";
+        $conexao = abrirConexao();
+        $resultado = mysqli_query($conexao, $sql);
+
+        while ($registro = mysqli_fetch_array($resultado)) {
+            exibirDialogo("$ndescricao <br> - ".$registro['und_descricao']);
+            
+            if (($ndescricao == $registro['und_descricao'])) {
+                $status = true;
+                $num = 0;
+            }
+        }
+        
+        if ($status) {
+            exibirDialogo("Unidade já cadastrada no sistema.");
+            redireciona(3);
+        } else {
+            $sql = "insert into unidade(und_descricao, und_sigla, und_municipio, und_coord, und_status) values('$ndescricao', '$nsigla', '$nmunicipio', '$ncoord', '$nstatus')";
+
+            $exec = mysqli_query($conexao, $sql);
+            exibirDialogo("Unidade cadastrada com sucesso no sistema.");
+            redireciona(3);
+        }
+        fecharConexao($conexao);
+        break;
     default:
         echo "nada de efeito.";
         break;
