@@ -117,30 +117,14 @@
 
   <script>
     //Função para formatar Matricula
-    // Obtém a referência para o elemento de entrada
-    const matriculaInput = document.getElementById('matricula');
+    var matriculaInput = document.getElementById("matricula");
 
-    // Adiciona um ouvinte de eventos para o evento "input"
-    matriculaInput.addEventListener('input', formatarMatricula);
-
-    // Função para formatar a matrícula
-    function formatarMatricula() {
-      // Obtém o valor atual do campo
-      let matricula = matriculaInput.value;
-
-      // Remove todos os caracteres não numéricos e não letras maiúsculas
-      matricula = matricula.replace(/[^A-Z0-9]/g, '');
-
-      // Formata a matrícula adicionando hífen e convertendo para maiúsculas
-      if (matricula.length > 1) {
-        matricula = matricula.slice(0, 6) + '-' + matricula.slice(6);
-        matricula = matricula.toUpperCase();
-      }
-
-      // Define o valor formatado no campo
-      matriculaInput.value = matricula;
-    }
-
+matriculaInput.addEventListener("input", function (event) {
+  var inputValue = event.target.value;
+  var sanitizedValue = inputValue.replace(/[^0-9A-Za-z]/g, "").toUpperCase();
+  var formattedValue = sanitizedValue.slice(0, 6) + "-" + sanitizedValue.slice(6);
+  event.target.value = formattedValue;
+});
 
 
     // Função para formatar CPF
