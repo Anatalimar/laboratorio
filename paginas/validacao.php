@@ -140,6 +140,9 @@ switch ($opcao) {
         fecharConexao($conexao);
         break;
     /* TELA DE CADASTRO DE UNIDADE */
+    /* PRECISA MUDAR ISSO AQUI*/
+    /* PRECISA MUDAR ISSO AQUI*/
+    /* PRECISA MUDAR ISSO AQUI*/
     case 5:
         $ndescricao = $_REQUEST['descricao'];
         $nsigla = $_REQUEST['sigla'];
@@ -157,7 +160,7 @@ switch ($opcao) {
         while ($registro = mysqli_fetch_array($resultado)) {
             exibirDialogo("$ndescricao <br> - ".$registro['und_descricao']);
             
-            if (($ndescricao == $registro['und_descricao'])) {
+            if (($ndescricao == $registro['und_descricao'])) { /* PRECISA MUDAR ISSO AQUI ---------------------------------------------------------------------------------- */
                 $status = true;
                 $num = 0;
             }
