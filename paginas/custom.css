@@ -8,6 +8,7 @@ a, i{
     text-decoration: none;
     color: black;
 }
+/*
 #fundo_pagina{
     background-image: url(../imagens/bacck2mauri.png);
     background-size: cover;
@@ -15,7 +16,7 @@ a, i{
   	background-repeat: no-repeat;
   	background-attachment: fixed;
 }
-
+*/
 #header{
     height: 100px;
     padding: 10px;
@@ -72,24 +73,24 @@ a, i{
     bottom: 0;
 }
 
-
 #area-meio{
     margin: 0;
-    padding: 10px;
+    padding: 0px 10px 10px 10px;
     height: auto;
-    background-color: #729ee0;
+    background-color: none;
     
 }
 #painel{
-    padding: 5px;
-    height: 75vh;
+    padding: 10px;
+    height: 79vh;
 }
 #painel1{
     padding: 5px;
     border-radius: 10px;
     background-color: #3c3c3c;
-    border: solid 1px;
+    border: solid 1px #ffffff;
     height: auto;
+    width: 15%;
 }
 #painel2{
     padding: 20px;
@@ -97,18 +98,19 @@ a, i{
     background-color: #3c3c3c;
     scroll-snap-align: start;
     height: auto;
-    margin-left: 5px;
+    border: solid 1px #ffffff;
+    margin-left: 10px;
 
 }
 #area{
-    background-color: #ffffff;
+   /* background-color: #ffffff; */
     border-radius: 10px;
 }
 #item-menu{
     height: 50px;
     background-color: gray;
     padding: 10px;
-    margin: 3px;
+    margin: 10px;
     font-weight: bold;
     font-size: 14px;
     border-radius: 5px;

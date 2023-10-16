@@ -9,17 +9,36 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
+    <style>
+        .bg-custon{
+            background: #0277BD;
+        }
+        .gradient-custom {
+        /* fallback for old browsers */
+        background: #014974;
+
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: linear-gradient(to right, rgba(1, 40, 63, 1), rgba(37, 117, 252, 1))
+        }
+        .shadow-custom {
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .25), 0 3px 10px 5px rgba(0, 0, 0, 0.05) !important;
+        }
+	</style>
+
 	<link rel="stylesheet" href="custom.css">
 
 </head>
 
-<body>
+<body class="gradient-custom">
     <div class="conteiner-fluid" id="cabecalho">
         <header class="row" id="header">
             <div id="logo-container justify-content-center">
                 <div class="row">
                     <div class="col-2" id="logo"><img src="../imagens/logo_am.png" height="80px" width="55px"></div>
-                    <div class="col" id="titulo_pagina">SECRETARIA DE EDUCAÇÃO E DESPORTO ESCOLAR</div>
+                    <div class="col text-white" id="titulo_pagina">SECRETARIA DE EDUCAÇÃO E DESPORTO ESCOLAR</div>
                 </div>
             </div>
         </header>
@@ -86,7 +105,7 @@
         </div>
     </div>
     <div class="container-fluid" id="rodape">
-    	<p align="center"><strong>SECRETARIA DE ESTADO DE EDUCAÇÃO - SEDUC</strong><br>
+    <p align="center" style="color:white"><strong style="color:white">SECRETARIA DE EDUCAÇÃO E DESPORTO ESCOLAR - SEDUC</strong><br>
         	    Rua Waldomiro Lustoza, 250 - Japiim II - Cep: 69076-830 - Manaus - Amazonas<br>
             	Copyright 2023 © Secretaria de Estado de Educação do Amazonas - Todos os direitos reservados.
 	</div>

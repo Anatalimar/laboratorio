@@ -68,6 +68,21 @@ function exibirDialogo($mensagem)
           </script>";
 }
 
+function consultaServidor($matricula){
+    $status = false;
+        $msg = "";
+        $num = 1;
+        $sql = "Select * from servidor";
+        $conexao = abrirConexao();
+        $resultado = mysqli_query($conexao, $sql);
+        while ($registro = mysqli_fetch_array($resultado)) {
+            if (($matricula == $registro['ser_matricula'])) {
+                $status = true;
+                $num = 0;
+            }
+        }
+}
+
 
 switch ($opcao) {
     /* TELA DE CADASTRO DE USUARIO */
