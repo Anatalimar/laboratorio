@@ -80,14 +80,17 @@ a, i{
     background-color: none;
     
 }
+
 #painel{
-    padding: 10px;
-    height: 79vh;
+    padding: 20px;
+    height: 80vh;
 }
+
 #painel1{
     padding: 5px;
     border-radius: 10px;
     background-color: #3c3c3c;
+    opacity:90%;
     border: solid 1px #ffffff;
     height: auto;
     width: 15%;
@@ -96,19 +99,29 @@ a, i{
     padding: 20px;
     border-radius: 10px;
     background-color: #3c3c3c;
+    opacity:90%;
     scroll-snap-align: start;
     height: auto;
     border: solid 1px #ffffff;
     margin-left: 10px;
 
 }
+
+.area_p2{
+    background-color:red;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 #area{
    /* background-color: #ffffff; */
     border-radius: 10px;
 }
 #item-menu{
     height: 50px;
-    background-color: gray;
+    background-color: #bdbdbd;
     padding: 10px;
     margin: 10px;
     font-weight: bold;
@@ -120,14 +133,49 @@ a, i{
 }
 
 .Cabecalho {
-    color: white;
+    color: #bdbdbd;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
 }
 
-.mb-2 {
+/* Configuração das páginas incluidas no painel 2 */
+
+.display-titulo{
+    width: 50%;
+}
+
+.ct-1 {
     margin-bottom: 2rem;
     margin-right: 10rem;
+    width: 20%;
 }
 
 .form-label{
   color: aliceblue;
+}
+
+.ct-2 {
+    margin-bottom: 2rem;
+    margin-right: 10rem;
+}
+
+.ct-3 {
+    margin-bottom: 2rem;
+    margin-right: 10rem;
+}
+
+.lb-titulo{
+  color: white;
+  margin-left: 23px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.form-label {
+  color: aliceblue;
+}
+
+.error {
+  color: red;
 }

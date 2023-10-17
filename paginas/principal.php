@@ -46,6 +46,9 @@
     <div class="conteiner-fluid" id="area-meio">
         <div class="row" id="painel">
                 <div class="col-2 justify-content-center" id="painel1">
+                    <div class="col" id="item-menu" style="font-size: 18px;">
+                        <a href="principal.php?pagina=1"><center>MENU</center></a>
+                    </div>
                     <div class="col" id="item-menu">
                         <img src="../imagens/novo_usuario.png" width="30" height="30">
                         <a href="principal.php?pagina=1">NOVO USUÁRIO</a>
@@ -97,9 +100,8 @@
                             case '8': include_once('novo_chip.html'); break;
                             case '9': header('Location: index.php'); break;
                             default: include_once('tela_padrao.html'); break;
-                    }
+                        }
                     ?>
-
                 </div>
             </div>
         </div>
