@@ -47,7 +47,7 @@
         <div class="row" id="painel">
                 <div class="col-2 justify-content-center" id="painel1">
                     <div class="col" id="item-menu" style="font-size: 18px;">
-                        <a href="principal.php?pagina=1"><center>MENU</center></a>
+                        <a href="principal.php"><center>MENU</center></a>
                     </div>
                     <div class="col" id="item-menu">
                         <img src="../imagens/novo_usuario.png" width="30" height="30">
